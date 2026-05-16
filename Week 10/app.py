@@ -12,8 +12,10 @@ def read_file():
         pass
     return users
 
-def write_file():
-    pass
+def write_file(username, password):
+    file = open("users.txt", "a")
+    file.write(username + "," + password + "\n")
+    file.close()
 
 
 def login():
