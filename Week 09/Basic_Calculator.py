@@ -1,3 +1,7 @@
+# Name: Ammaz Ahmed
+#ID : F2024408284
+# WEEK 9
+
 import tkinter as tk
 
 def calculate(operation):
