@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
+
 def get_car_data(car):
         
    # car =input("Enter manufacturer name:")
@@ -30,20 +32,24 @@ def get_car_data(car):
         
         
 
-    
-    
-    
-    
-    
-    
+
 
 # function to save data on csv file
 def save_to_csv(data, filename):
-    pass
+  with open (filename, 'w', newline=' ', encoding='utf-8') as file
+   writer = csv.writer (file)
+   writer.writerow(['Car Name', 'Prices'])
 
+   for car in data:
+      writer.writerow([car['name'], car['price']])
 
+print("Data Saved Successfully!")
 
+#Main program
 
+manufacturer =input ("Enter Manufacturer name: ")
+data = get_car_data(manufacturer)
+save_to_csv(data, "CARS.csv")
 
 
 
